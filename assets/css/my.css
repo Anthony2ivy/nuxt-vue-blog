@@ -1,0 +1,292 @@
+:root {
+
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+}
+
+.my-fullback-img {
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: -1;
+}
+
+.my-header {
+  width: 100%;
+  height: 40px;
+  position: fixed;
+  z-index: 9999;
+  padding-right: 15%;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-bottom: 1px solid #e7e7e7;
+  transition: all 0.5s;
+}
+
+.my-nav-list {
+  height: 40px;
+
+  & .my-nav-item {
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 10px;
+    padding: 0 5px;
+    cursor: pointer;
+    font-family: "Microsoft YaHei", 微软雅黑, "MicrosoftJhengHei", 华文细黑, STHeiti, MingLiu;
+    color: #1D1D1F;
+    font-size: 14px;
+
+    &:after {
+      content: "";
+      display: block;
+      position: relative;
+      height: 2px;
+      width: 100%;
+      background-color: #6190E8;
+      transform: scaleX(0);
+      transition: all 0.3s;
+    }
+
+    &:not(.router-link-active):hover:after {
+      transform: scaleX(1.2);
+    }
+
+    &.router-link-active:after {
+      transform: scaleX(1.2);
+    }
+
+  }
+}
+
+.my-back-transparent {
+  background-color: rgba(255, 255, 255, 0);
+  background-size: cover;
+  background-position: center;
+  border-bottom-color: rgba(255, 255, 255, 0);
+}
+
+.my-center-title {
+  color: black;
+  text-align: center;
+  width: 100%;
+  margin-top: -200px;
+  font-size: 35px;
+  font-family: 'Helvetica Neue';
+}
+
+.my-double-circle-icon {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0px 0px 0px 7px #ececec, 0px 0px 9px 9px rgba(0, 0, 0, 0.3);;
+}
+
+.my-center-second-title {
+  text-align: center;
+  font-family: "PingFang SC";
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+  padding-left: 30px;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.7);
+  text-align: left;
+  margin-left: 50%
+}
+
+.my-tag-group {
+  text-align: left;
+  & .at-tag{
+    margin-right: 10px;
+    margin-top: 5px;
+    cursor: pointer;
+    & .at-tag__text{
+      font-size: 14px;
+      color: white;
+    }
+  }
+}
+
+hr.lite {
+  margin: 1.2em 0;
+  border: 0;
+  border-bottom: 1px solid #C5D9E8;
+}
+
+.my-col-container {
+  padding: 0 20px;
+}
+
+.my-img-rectangle {
+  border-radius: 3px;
+  max-width: 300px;
+  border-radius: 3px;
+  box-shadow: 0px 0px 0px 3px #ececec, 0px 0px 6px 3px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 200px;
+}
+
+.my-p {
+  font-family: "PingFang SC";
+  color: #8DABC4ff;
+  font-size: 18px;
+}
+
+.my-intro-title {
+  font-family: "PingFang SC";
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.my-blog-item {
+  text-align: left;
+  font-family: ”PingFang SC“;
+  cursor: pointer;
+  padding: 0 0 1rem 0;
+  color: #3F536E;
+  & .my-blog-title{
+    font-size: 24px;
+    font-weight: 500;
+    color: #2C405A;
+  }
+  & .my-blog-intro {
+    font-style: italic;
+    opacity: 0.5;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    color: #3F536E;
+    overflow: hidden;
+  }
+  & .my-blog-footer {
+    margin-top: 7px;
+    font-family: Lora, 'Times New Roman', serif;
+    color: #ccc;
+    font-size: 16px;
+    font-style: italic;
+  }
+  &:hover {
+    & .my-blog-title {
+      color: #6190E8;
+    }
+    & .my-blog-intro {
+      color: #6190E8;
+    }
+  }
+}
+
+.my-timeline{
+  & .my-timeline-item {
+    position: relative;
+    word-break: break-all;
+    padding: 1px;
+    //:before时间轴点之间的连线
+    &:before{
+      content: '';
+      display: block;
+      position: absolute;
+      width: 2px;
+      background-color: #dfdfdf;
+      left: -20px;
+    }
+    &:not(:last-child):not(:first-child):before {
+      top: 0;
+      height: 100%;
+    }
+    &:first-child:before {
+      height: 50%;
+      top: 50%;
+    }
+    &:last-child:before {
+      height: 50%;
+      top: 0;
+    }
+    //:after时间轴圆点
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: white;
+      top: 50%;
+      left: -20px;
+      margin-top: -5px;
+      border-radius: 5px;
+      margin-left: -4px;
+      border: 2px solid #78a4fa;
+      transition: all 0.2s;
+    }
+    &.year{
+      font-size: 20px;
+      height: 50px;
+      line-height: 50px;
+      &:after{
+        width: 14px;
+        height: 14px;
+        margin-left: -6px;
+        margin-top: -7px;
+        border-radius: 7px;
+        background-color: #78a4fa;
+      }
+    }
+    & .my-timeline-item__time {
+      position: absolute;
+      left: -10px;
+      height: 16px;
+      top: 50%;
+      margin-top: -8px;
+      line-height: 16px;
+      transition: all 0.2s;
+    }
+    & .my-timeline-item__block {
+      margin-left: 30px;
+      box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.1);
+      margin-bottom: 10px;
+      margin-top: 10px;
+      padding: 15px;
+      border-radius: 2px;
+      background-color: white;
+      transition: all 0.2s;
+      & .my-timeline-item__title{
+        cursor: pointer;
+        &:hover{
+          color:black;
+        }
+      }
+    }
+    &:hover,&.hover {
+      & .my-timeline-item__block {
+        box-shadow: 0px 1px 4px 2px rgba(0, 0, 0, 0.2);
+        transform: translateX(15px);
+      }
+      & .my-timeline-item__time {
+        font-size: 18px;
+        transform: translateX(6px);
+      }
+      &:not(.year):after{
+        transform: scale(1.5);
+        box-shadow: 0 0 5px 2px #78a4fa61;
+      }
+    }
+
+  }
+}
+
+.my-at-tag-blue{
+
+}
+
+.my-blog-container {
+  background-color: #f7f7f7;
+  min-height: 1000px;
+  box-shadow: 0px 1px 4px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}

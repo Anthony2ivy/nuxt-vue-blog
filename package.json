@@ -1,0 +1,39 @@
+{
+  "name": "nuxt-vue-blog",
+  "version": "1.0.0",
+  "description": "My lovely Nuxt.js project",
+  "author": "zhangwenxuan",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server",
+    "build": "nuxt build",
+    "start": "cross-env NODE_ENV=production node server/index.js",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cross-env": "^5.2.0",
+    "express": "^4.16.4",
+    "express-session": "^1.15.6",
+    "express-validator": "^5.3.1",
+    "iview": "^3.1.5",
+    "mysql2": "^1.5.3",
+    "nuxt": "^2.0.0",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "postcss-hexrgba": "^1.0.2",
+    "postcss-nested": "^4.1.2",
+    "postcss-responsive-type": "^1.0.0",
+    "sequelize": "^4.38.0",
+    "sqlite3": "^4.0.6"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9",
+    "postcss": "^6.0.22",
+    "postcss-comment": "^2.0.0",
+    "postcss-cssnext": "^3.1.0",
+    "postcss-import": "^11.0.0",
+    "postcss-loader": "^2.0.8",
+    "postcss-url": "^7.2.1"
+  }
+}
