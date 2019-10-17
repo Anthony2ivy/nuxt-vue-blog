@@ -14,6 +14,7 @@ router.use(bodyParser.json())
 router.use(passport.initialize());
 router.use(passport.session());
 
+
 router.all('*', function (req, res, next) {
     res.header('Access-Control-Allow-Origin', 'http://localhost:8080');
     //Access-Control-Allow-Headers ,可根据浏览器的F12查看,把对应的粘贴在这里就行
@@ -37,6 +38,6 @@ router.get('/logout',function (req,res) {
     res.json({status:'success'});
 })
 
-router.use('/blog', blogRouter);
+router.use('/blogs', blogRouter);
 
 module.exports=router;
