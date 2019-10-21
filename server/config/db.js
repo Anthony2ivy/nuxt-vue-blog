@@ -1,8 +1,8 @@
-const config=require("./config")
+const config=require("../../server.config")
 const Sequelize = require('sequelize')
 const path =require('path')
 var sequelize = new Sequelize(undefined, undefined, undefined, {
-    host: 'localhost',
+    host: config.dataBaseHost,
     dialect: 'sqlite',
     storage: path.normalize(config.sqliteStoragePath)
 });

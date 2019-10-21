@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
-const blogRouter = require('./router/blogRouter')
+const blogRouter = require('./router/blogRouter');
+const staticRouter = require('./router/staticRouter')
 const session = require("express-session")
 const bodyParser = require("body-parser");
 const middlewareUtil = require("./middlewares/middlewareUtil");
@@ -39,5 +40,5 @@ router.get('/logout',function (req,res) {
 })
 
 router.use('/blogs', blogRouter);
-
+router.use('/static',staticRouter);
 module.exports=router;

@@ -13,7 +13,7 @@ router.delete('*',isLoggedIn);
 router.use(bodyParser.json());
 router.use(errorMiddleware);
 router.get("/", (req, res) => {
-    blogDao.findAll().then(blogs => {
+    blogDao.findAll({attributes:['id','title','intro','createdAt','updatedAt']}).then(blogs => {
         res.send(blogs);
     })
 })
@@ -70,4 +70,6 @@ router.delete("/:blogId",blogDao.checkDelete,(req,res) =>{
         res.json({status:"error"});
     })
 })
+
+
 module.exports = router;
