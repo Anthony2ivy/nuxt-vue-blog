@@ -17,9 +17,9 @@ const storage =multer.diskStorage({
   }
 });
 const upload=multer({storage:storage});
-// router.post('*',isLoggedIn);
-// router.put('*',isLoggedIn);
-// router.delete('*',isLoggedIn);
+router.post('*',isLoggedIn);
+router.put('*',isLoggedIn);
+router.delete('*',isLoggedIn);
 router.use(bodyParser.json());
 router.use(errorMiddleware);
 router.post('/img',function (req,res) {
